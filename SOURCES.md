@@ -22,3 +22,5 @@ The homepage shows the obverse and reverse of a silver Athenian tetradrachm (acc
 The Apollo cover is a built-in ImageGen concept. Art direction: a weathered marble Apollo bust, ultramarine espresso cup and olive branch on travertine, with afternoon light from the right and shadows on the left. It illustrates the theme and does not depict a verified Greko interior. The outlets use illustrative stock photography, an Athenian coin and an original trident emblem.
 
 Additional illustrative menu photography: [milk being poured into coffee](https://images.unsplash.com/photo-1541167760496-1628856ab772), [croissant](https://images.unsplash.com/photo-1555507036-ab1f4038808a), and [citrus drink](https://www.pexels.com/photo/96974/).
+
+The homepage uses the wider ImageGen variation in images/apollo-still-life.webp. The edit prompt requested the full Apollo bust and pedestal, generous headroom, and the entire cup and saucer, keeping the original lighting and 3:2 composition.
