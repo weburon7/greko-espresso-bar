@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 480" fill="none">
+<defs>
+ <pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M0 5 5 0" stroke="#293b48" stroke-width="1.3"/></pattern>
+ <pattern id="dots" width="4" height="4" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#8d4130"/></pattern>
+ <clipPath id="ground"><path d="m45 338 385-58 196 80-380 96z"/></clipPath>
+ <path id="spark" d="M0-19C1-5 3-2 14 0 4 2 2 5 0 20-2 5-4 2-14 0-4-2-2-5 0-19Z"/>
+</defs>
+<!-- A screen print in apricot, Prussian blue and warm red. -->
+<circle cx="344" cy="194" r="154" fill="#e78e6e"/>
+<path d="M275 331a154 154 0 0 0 200-211 158 158 0 0 1-200 211Z" fill="url(#dots)"/>
+<g stroke="none" fill="#f4e3b4"><path d="m45 338 385-58 196 80-380 96z"/></g>
+<g clip-path="url(#ground)" transform="translate(0 0)" fill="#5d87a0">
+<g transform="matrix(1 -.175 1.03 .47 -106 338)"><path d="M0 0h800v320H0z" fill="#f9e7bd"/><path d="M0 0h800v320H0z" fill="url(#tiles)"/></g></g>
+<defs><pattern id="tiles" width="84" height="84" patternUnits="userSpaceOnUse"><path d="M0 0h42v42H0zM42 42h42v42H42z" fill="#6590a5"/></pattern></defs>
+<g fill="#2c414c"><ellipse cx="350" cy="335" rx="114" ry="16" transform="rotate(-8 350 335)" opacity=".55"/><ellipse cx="194" cy="374" rx="62" ry="7" opacity=".45"/></g>
+<!-- Faceted aluminium pot with bakelite handle and engraved hatch marks. -->
+<g transform="rotate(7 348 220)" stroke="#253844" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="m391 112 35-4q19-1 25 17l18 64q5 20-9 30l-30 21-11-12 25-25-14-70-36 8z" fill="#344550"/>
+<path d="m401 118 25-1q11 0 15 12l17 66" stroke="#9da19a" stroke-width="3"/>
+<path d="m269 109-34-4 26 38 38 85 88-1 20-111-78-19z" fill="#fff3d0"/>
+<path d="m263 118 22 8 32 100-18 2z" fill="#91a4a2"/><path d="m286 126 36 3 15 96-20 1z" fill="#e5d8af"/>
+<path d="m322 129 48-6-8 102-25 1z" fill="#fff4d7"/><path d="m370 123 37-7-20 110-25 1z" fill="#82989b"/>
+<path d="m378 125 22-5-18 100-13 3z" fill="url(#hatch)" stroke="none"/>
+<path d="m244 105 79-40 84 44-2 8-81 15-61-10z" fill="#e8dcb6"/>
+<path d="m246 105 79-39-33 45-30 7z" fill="#fdf2d0"/><path d="m326 66 79 44-56 10z" fill="#9ba9a3"/>
+<path d="m249 105 76 16 80-12" fill="none"/><path d="m315 69-7-18 8-8 19 1 8 10-10 16z" fill="#283a44"/>
+<path d="m316 50 16 1" stroke="#f3d2a0"/>
+<path d="m299 228 87-3-2 13-82 4z" fill="#2b414c"/><path d="m303 229 79-2" stroke="#f1dfb4" stroke-width="2"/>
+<path d="m302 241 82-5 35 79-8 13-69 17-63-15-5-10z" fill="#ece0bb"/>
+<path d="m304 242 17-1-15 92-27-6-5-8z" fill="#91a7a5"/><path d="m321 241 25-2 1 99-41-6z" fill="#fff0ca"/>
+<path d="m346 239 21-2 19 95-39 8z" fill="#dad3b7"/><path d="m367 237 17-1 35 79-33 15z" fill="#8ca2a0"/>
+<path d="m375 243 6-1 31 71-19 8z" stroke="none" fill="url(#hatch)"/>
+<path d="m276 318 67 16 75-18m-139 13 64 15 69-16" fill="none"/>
+<circle cx="353" cy="259" r="6" fill="#a29064"/><path d="m350 260 6-2" stroke-width="2"/>
+<g transform="translate(342 173) rotate(-7)" stroke-width="2"><ellipse rx="15" ry="20" fill="#d3c99e"/><path d="M-7 2q0-12 10-11M-7 2q1 10 12 4V0H0"/></g>
+</g>
+<!-- Espresso cup, painted rings, saucer and spoon. -->
+<g stroke="#293d48" stroke-width="3.5" stroke-linejoin="round">
+<ellipse cx="197" cy="357" rx="76" ry="17" fill="#a7b7b1" transform="rotate(-5 197 357)"/>
+<ellipse cx="196" cy="353" rx="75" ry="15" fill="#ffedc4" transform="rotate(-5 196 353)"/>
+<path d="M237 299q30-16 32 3t-31 28l-5-8q23-6 24-15t-20 1z" fill="#ffdfbc"/>
+<path d="M144 292q5 52 31 62 29 7 48-7 13-14 17-52z" fill="#e77758"/>
+<path d="M151 313q41 12 84 2l-3 9q-38 11-78-2z" fill="#ffedc4" stroke="none"/>
+<ellipse cx="192" cy="293" rx="48" ry="12" fill="#f9e8bf"/>
+<ellipse cx="192" cy="295" rx="39" ry="7" fill="#44392e" stroke="#9b6248" stroke-width="3"/>
+<path d="M159 329q5 15 15 18" stroke="#fff0c7" stroke-width="2"/>
+<path d="M187 270q-17-10-5-24t-1-24m18 45q-6-7 2-18" fill="none" stroke-width="2.5"/>
+<path d="m411 369 79-26q13-10 21-7t-6 11q-7 2-16 0l-77 27q-8 1-1-5z" fill="#b2bcad"/>
+</g>
+<g fill="#334450"><use href="#spark" x="181" y="122"/><use href="#spark" transform="translate(493 242) scale(.65)"/><use href="#spark" transform="translate(201 105) scale(.42)"/></g>
+</svg>
