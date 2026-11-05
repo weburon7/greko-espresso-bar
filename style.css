@@ -34,3 +34,28 @@ body{background:var(--paper);color:var(--ink)}
 @media(max-width:520px){#main .gs-feat>a{display:grid;grid-template-columns:36% 1fr;column-gap:17px;align-content:center;border-top:1px solid #b8ae98;padding-top:13px}#main .gs-feat img{grid-row:span 2;aspect-ratio:1.55}#main .gs-feat .gs-upper{align-self:end}#main .gs-feat h3{align-self:start;line-height:1.1}.pot-print{width:min(91%,365px);margin:0 auto -1%}.poster-copy .actions .btn{padding-inline:15px}.poster-copy h1{font-size:clamp(65px,16vw,81px)}}
 .poster-copy h1{letter-spacing:-.047em;word-spacing:.04em}.brand b{letter-spacing:-.06em}#main :is(h1,h2,h3):not(.poster-copy h1){letter-spacing:-.038em}
 @media(max-width:780px){.poster-copy{pointer-events:auto}}
+
+/* The Athenian silver coin supplies the palette and the central portrait. */
+:root{--ink:#1b3043;--tomato:#874720;--green:#173955;--blue:#284f72;--paper:#faf4e8}
+#header{background:#f8f2e5;border-bottom:0}.brand{color:#233d58}.brand b{font:700 46px/.84 Georgia,serif;letter-spacing:-.085em;transform:none}
+.counter-poster{background:#122d46 url('/greko-espresso-bar/images/paper.svg');color:#fff5dc;position:relative;border:0}
+.counter-poster::before,.counter-poster::after{content:'';display:block;height:16px;background:url('/greko-espresso-bar/images/meander.svg') repeat-x center;opacity:.85}
+.poster-inner{grid-template-columns:1fr 1fr;padding-block:clamp(26px,3.5vw,63px);gap:1%}
+.poster-copy .place-line{color:#e1c892;font-size:15px}
+.poster-copy h1{font:400 clamp(78px,8.7vw,140px)/.88 Georgia,'Times New Roman',serif;letter-spacing:-.075em;color:#fff6df;margin:24px 0}
+.poster-copy h1 em{color:#eace98;font-weight:400;font-style:italic;transform:none;letter-spacing:-.073em}
+.poster-copy p{color:#efe8d9}.poster-copy .btn{background:#f1d8a6;color:#152e48;border-color:#f1d8a6}.poster-copy .btn:hover{background:#ffedc8}
+.poster-copy .btn.outline{border-color:#b3b9b9;color:#fff4df;background:transparent}.poster-copy .btn.outline:hover{background:#28445c}
+.athena-art{width:min(100%,625px);margin:0 auto;position:relative}
+.coin-field{position:relative;width:100%;aspect-ratio:1.45;isolation:isolate;background:radial-gradient(ellipse closest-side,#3d5360,transparent 100%)}
+.coin-field:before{content:'';position:absolute;inset:2% 7% 1% 10%;border:1px solid #a28c6299;border-radius:50%;transform:rotate(-19deg)}
+.orbit{position:absolute;inset:10% 4% 7% 6%;border:1px dashed #c8b18688;border-radius:50%;transform:rotate(17deg)}
+.coin-face,.coin-owl{position:absolute;height:auto;filter:drop-shadow(5px 12px 7px #071c2cd9)}
+.coin-face{width:55%;top:2%;left:12%;transform:rotate(-7deg)}
+.coin-owl{width:35%;bottom:2%;right:8%;transform:rotate(10deg)}
+.north-star,.south-star{position:absolute;color:#ead4a6;font:normal 36px Georgia}.north-star{right:18%;top:7%}.south-star{bottom:6%;left:14%;font-size:21px}
+.athena-art figcaption{display:flex;align-items:center;justify-content:center;gap:15px;font:italic 19px Georgia;color:#edd6a8;margin:7px 0}.athena-art figcaption span{font-size:7px}
+.location-bar{background:#ead7b3;color:#1d354a}.tinted{background:#e3e7df}.promos article{background:#eee1c6}.promos article:nth-child(2){background:#dce5e6}
+#main .counter-menu h2,#main .tinted h2,#main .gallery h2,#main .promos h2,#main .op-shell>h1,#main .gs>h1,#main .member-lead h1,#main .inner>h1{font-family:Georgia,serif;font-weight:400;letter-spacing:-.055em}
+#main .op-shell>h1,#main .gs>h1,#main .inner>h1{border-color:#a68c5f}#footer{background:#122d46}
+@media(max-width:780px){.poster-inner{padding:25px 6% 12px}.poster-copy h1{font-size:clamp(59px,13.8vw,88px);margin:14px 0}.poster-copy h1 br{display:block}.poster-copy h1 em,.poster-copy h1 em:before{margin-left:0;content:none}.athena-art{max-width:380px;margin:12px auto 0}.coin-field{aspect-ratio:1.78}.coin-face{width:48%;left:13%}.coin-owl{width:29%;right:13%}.athena-art figcaption{font-size:16px}.counter-poster::before,.counter-poster::after{height:12px;background-size:36px 12px}.brand b{font-size:38px}}

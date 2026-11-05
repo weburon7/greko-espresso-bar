@@ -12,3 +12,7 @@ These editorial stock photos illustrate the prototype. Replace them with client-
 ## Redesign references
 
 Dishoom's restaurant site connects its cafés with their city (https://www.dishoom.com/). Fondazione Prada's Bar Luce presents a Milanese café through a distinctive physical setting (https://www.fondazioneprada.org/barluce-en/?lang=en). These informed the neighbourhood links and printed café-sign direction. The moka pot, cup and tiled counter illustration were drawn for this prototype. Bricolage Grotesque is self-hosted under the included OFL license.
+
+## Olympus edition
+
+The homepage shows the obverse and reverse of a silver Athenian tetradrachm (accession 1941.296), public-domain images from the Cleveland Museum of Art’s Open Access collection. The helmeted head is Athena; the reverse shows her owl. The images have been cropped for display. [Collection record](https://www.clevelandart.org/art/1941.296)

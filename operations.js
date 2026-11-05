@@ -75,7 +75,7 @@
       const rec=read(requestKey,[]).find(r=>r.id===lastId);
       body='<div class="op-panel">'+tag(rec?.status||pending)+'<h2>Request saved for the demo</h2><p>Reference '+html(lastId)+'. Staff can review this enquiry in the presentation dashboard.</p>'+summary(rec?.rows||requestRows(formState))+'<button class="op-btn" data-op="new">Start another request</button></div>';
     } else body=requestForm(formState);
-    return shell('Tables & occasions','Book a table','Choose an outlet and tell us about your gathering.',msg()+body);
+    return shell('Hestia’s table','Book a table','Hestia is the Greek goddess of the hearth. Make room for your gathering at Greko: choose an outlet and tell us who’s coming.',msg()+body);
   }
   function capture(form){
     const data=new FormData(form);

@@ -24,7 +24,7 @@
   function intro() {
     const tiers = G.tiers.map(tier => `<article><small>From ${esc(tier.threshold)} sample points</small><h3>${esc(tier.name)}</h3><p>${esc(tier.description)}</p></article>`).join('');
     const rewards = G.rewards.map(reward => `<article><small>${esc(reward.points)} sample points</small><h3>${esc(reward.name)}</h3><p>${esc(reward.description)}</p></article>`).join('');
-    return `<div class="member-lead"><div><small>Membership preview</small><h1>The Greko Club</h1><p>A little extra for your coffee ritual. Explore a sample points balance, birthday benefits and rewards for returning guests.</p>
+    return `<div class="member-lead"><div><small>Membership preview</small><h1>The Laurel Club</h1><p>Named for Apollo’s laurel, this club is for familiar faces at the coffee counter. Explore a sample points balance, birthday benefits and rewards for returning guests.</p>
       <div class="member-actions"><button type="button" data-member="signup">Try demo sign-up</button><button class="secondary" type="button" data-member="signin">Demo sign-in</button></div></div>
       <img src="/greko-espresso-bar/images/drink.jpg" alt="Stock photograph of milk swirling into iced coffee"></div>
       <section><h2>Sample tiers</h2><p>In this example, each qualifying visit earns 25 points. Joining is optional for browsing, ordering and booking.</p><div class="member-grid">${tiers}</div></section>
