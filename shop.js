@@ -8,20 +8,20 @@
     date.setDate(date.getDate() + offset);
     return [date.getFullYear(), String(date.getMonth() + 1).padStart(2, '0'), String(date.getDate()).padStart(2, '0')].join('-');
   };
-  const makeItem = (id, name, category, description, price, dietary, photo, outlets = both, available = true) => ({
-    id, name, category, description, price, dietary, photo: '/greko-espresso-bar/images/' + photo + '.jpg', alt: name + ' category photograph, illustrative', outlets, available
+  const makeItem = (id, name, category, description, price, dietary, outlets = both, available = true) => ({
+    id, name, category, description, price, dietary, photo: '/greko-espresso-bar/images/menu-' + id + '.webp', alt: name + ' — concept photograph', outlets, available
   });
   window.shopSeed = {
     categories: ['Coffee', 'Other drinks', 'Food', 'Desserts'],
     menu: [
-      makeItem('flat-white', 'Flat white', 'Coffee', 'A double espresso folded into silky steamed milk.', 220, 'Contains milk', 'flat-white'),
-      makeItem('focaccia', 'Demeter garden focaccia', 'Food', 'A nod to the goddess of harvest: roasted vegetables, basil and olive oil on focaccia.', 310, 'Vegetarian · Contains wheat', 'food'),
-      makeItem('tiramisu', 'Classic tiramisu', 'Desserts', 'Espresso-soaked sponge layered with mascarpone and cocoa.', 260, 'Contains egg, milk and wheat', 'dessert'),
-      makeItem('espresso', 'Zeus double espresso', 'Coffee', 'Two short shots with a thunderbolt of coffee flavour.', 150, 'Plant-based', 'coffee'),
-      makeItem('cooler', 'Poseidon citrus cooler', 'Other drinks', 'Sparkling citrus over ice, finished with fresh mint.', 180, 'Plant-based', 'citrus'),
-      makeItem('iced-latte', 'Iced latte', 'Coffee', 'Espresso poured over chilled milk and ice.', 240, 'Contains milk', 'drink', [east]),
-      makeItem('croissant', 'Butter croissant', 'Food', 'Golden, flaky pastry with a soft butter centre.', 190, 'Contains wheat and milk', 'croissant', [model]),
-      makeItem('cocoa', 'Iced cocoa', 'Other drinks', 'Dark cocoa shaken with chilled milk.', 210, 'Contains milk', 'drink', both, false)
+      makeItem('flat-white', 'Flat white', 'Coffee', 'A double espresso folded into silky steamed milk.', 220, 'Contains milk'),
+      makeItem('focaccia', 'Demeter garden focaccia', 'Food', 'A nod to the goddess of harvest: roasted vegetables, basil and olive oil on focaccia.', 310, 'Vegetarian · Contains wheat'),
+      makeItem('tiramisu', 'Classic tiramisu', 'Desserts', 'Espresso-soaked sponge layered with mascarpone and cocoa.', 260, 'Contains egg, milk and wheat'),
+      makeItem('espresso', 'Zeus double espresso', 'Coffee', 'Two short shots with a thunderbolt of coffee flavour.', 150, 'Plant-based'),
+      makeItem('cooler', 'Poseidon citrus cooler', 'Other drinks', 'Sparkling citrus over ice, finished with fresh mint.', 180, 'Plant-based'),
+      makeItem('iced-latte', 'Iced latte', 'Coffee', 'Espresso poured over chilled milk and ice.', 240, 'Contains milk', [east]),
+      makeItem('croissant', 'Butter croissant', 'Food', 'Golden, flaky pastry with a soft butter centre.', 190, 'Contains wheat and milk', [model]),
+      makeItem('cocoa', 'Iced cocoa', 'Other drinks', 'Dark cocoa shaken with chilled milk.', 210, 'Contains milk', both, false)
     ],
     offers: [
       {code:'SIP10',name:'A little coffee break',benefit:'10% off eligible coffee',percent:10,start:dateAt(-7),end:dateAt(21),outlets:both,items:['flat-white','espresso','iced-latte'],minimum:150,terms:'Discount applies to eligible coffees only. One code per preview order.'},
@@ -109,7 +109,7 @@
   .gs p{line-height:1.6}.gs-upper,.gs-feat .gs-upper{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#805323}
   .gs-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(200px,.9fr);align-items:center;gap:clamp(20px,4vw,65px);padding-bottom:26px;border-bottom:3px double var(--brass)}
   .gs-hero h1,.gs-heading h1{margin:.14em 0 .18em}.gs-lead{max-width:53ch}.gs-hero figure{margin:0;overflow:hidden;position:relative;background:var(--navy);height:clamp(210px,22vw,300px);border-radius:120px 120px 4px 4px}
-  .gs-hero figure:not(.gs-coin){height:auto;aspect-ratio:16/9;border-radius:3px;align-self:center;width:100%}.gs-hero figure img{width:100%;height:100%;object-fit:cover}.gs-hero .gs-coin img{object-fit:contain;padding:20px;transform:rotate(-9deg)}
+  .gs-hero figure:not(.gs-coin){height:auto;aspect-ratio:3/2;border-radius:3px;align-self:center;width:100%}.gs-hero figure img{width:100%;height:100%;object-fit:contain}.gs-hero .gs-coin img{object-fit:contain;padding:20px;transform:rotate(-9deg)}
   #main .gs .gs-demo{display:block;color:#605541;font-size:.83rem;background:none;border:0;padding:0;margin:14px 0 0}
   .gs-toolbar,.gs-row,.gs-filters,.gs-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.gs-toolbar{align-items:end;margin:28px 0 14px}
   .gs-toolbar label,.gs-check label,.gs label{display:grid;gap:5px;font-size:.86rem;font-weight:650}.gs input,.gs select{line-height:1.4;font-family:inherit;font-size:1rem;font-weight:400;color:var(--navy);min-width:0;width:100%;min-height:46px;padding:10px 13px;border:1px solid #998a73;background:#fffdf6;border-radius:4px}
@@ -117,14 +117,14 @@
   .gs button:disabled{cursor:default}.gs button:hover:not(:disabled),.gs-action:hover{background:#e9dec9}.gs button.primary,.gs .primary,.gs button.selected{color:#fffaf1;background:var(--navy);border-color:var(--navy)}.gs button.primary:hover,.gs .primary:hover,.gs button.selected:hover{background:#315774}
   .gs :focus-visible,.gs-feat a:focus-visible{outline:3px solid #aa6d22;outline-offset:3px}.gs-filters{gap:7px}.gs-filters button{border-radius:32px!important}
   .gs-group{margin:36px 0}.gs-group>h2,.gs-offers-group>h2{border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:14px}
-  .gs-grid,.gs-offers-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.gs-feat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.gs-feat a{color:inherit;text-decoration:none}.gs-feat img{width:100%;object-fit:cover}.gs-feat h3{margin:0}
-  #main .gs .gs-card{display:grid;grid-template-columns:minmax(0,38fr) minmax(0,62fr);gap:clamp(12px,1.4vw,21px);align-items:start;padding:15px;border:1px solid var(--line);background:#fffaf0}.gs-card img{align-self:center;width:100%;height:auto;aspect-ratio:6/5;object-fit:cover;border-radius:2px}.gs-card h3{margin:1px 0 7px}.gs-card p{font-size:.91rem;line-height:1.46}.gs-card .gs-meta{margin-top:8px;color:#5c594f;font-size:.78rem}
+  .gs-grid,.gs-offers-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.gs-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.gs-feat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.gs-feat a{color:inherit;text-decoration:none}.gs-feat img{width:100%;object-fit:cover}.gs-feat h3{margin:0}
+  #main .gs .gs-card{display:flex;flex-direction:column;min-width:0;padding:0;border:1px solid #d4c7af;border-radius:7px;overflow:hidden;background:#fffaf0;box-shadow:0 5px 16px #30271b08}.gs-card>img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#eee3cf;border-radius:0;border-bottom:1px solid #d4c7af}.gs-card-copy{display:flex;flex:1;flex-direction:column;padding:20px}.gs-card .gs-card-copy .gs-row{margin-top:auto;padding-top:18px}.gs-card h3{margin:1px 0 7px}.gs-card p{font-size:.91rem;line-height:1.46}.gs-card .gs-meta{margin-top:8px;color:#5c594f;font-size:.78rem}
   .gs-card .gs-row{gap:8px;margin-top:15px;justify-content:space-between}.gs-price{font-variant-numeric:tabular-nums}.gs-empty{border:1px dashed var(--line);margin:16px 0;padding:24px;display:grid;justify-items:start;gap:12px}
   .gs-offers-group{margin:32px 0}.gs-offer,.gs-sheet{border:1px solid var(--line);background:#fffaf0;padding:clamp(17px,2.5vw,30px)}.gs-offer{border-top:4px solid var(--brass)}.gs-offer h3{margin:8px 0}.gs-offer details{margin:18px 0}.gs-offer summary{font-weight:650;cursor:pointer;text-decoration:underline;text-underline-offset:3px}.gs-offer dl{display:grid;grid-template-columns:auto 1fr;gap:7px 14px;margin-bottom:18px;font-size:.9rem}.gs-offer dd{margin:0}.gs-offer dt{font-weight:650}.gs-offer code{font-size:1rem;letter-spacing:.09em}.gs-offer .gs-row{padding-top:14px;border-top:1px dashed var(--line)}
   .gs-heading{margin-bottom:22px}.gs-layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(255px,.8fr);align-items:start;gap:clamp(15px,3vw,40px)}.gs-sheet h2,.gs-total-panel h2{font-size:clamp(25px,2.5vw,34px);margin-bottom:15px}.gs-sheet+.gs-sheet{margin-top:14px}.gs-line,.gs-totals p{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:14px 0;border-bottom:1px solid var(--line)}.gs-line strong,.gs-line small{display:block}.gs-line small{color:#5e5d58}
   .gs-line .gs-row{gap:5px}.gs-totals p{margin:0}.gs-line button{min-width:44px}.gs-total-panel{color:#fff9e9;background:var(--navy);padding:clamp(20px,3vw,35px);border-top:4px solid #b79154}.gs-total-panel h2,.gs-total-panel p{color:inherit}.gs-total-panel .gs-row{margin-top:18px}.gs-total-panel button.primary{background:#f6e5bc;border-color:#f6e5bc;color:var(--navy)}.gs-total-panel button.primary:hover{background:#fff1d1}.gs-total-panel .gs-totals p{border-color:#70808a}.gs-check,.gs-code{display:grid;gap:13px}.gs-code .gs-row{align-items:end}.gs-code label{flex:1;min-width:130px}.gs-feedback{margin:10px 0;color:#654425}.gs-muted{color:#5e5c54;font-size:.87rem}.gs-follow{margin-top:18px}.gs a:not(.gs-action){text-underline-offset:3px}
-  @media(max-width:850px){#main .gs .gs-card{grid-template-columns:1fr}.gs-hero figure{height:225px}.gs-layout{grid-template-columns:minmax(0,1fr) minmax(235px,.8fr)}}
-  @media(max-width:650px){.gs-hero,.gs-layout{grid-template-columns:minmax(0,1fr)}.gs-hero{gap:15px}.gs-hero figure{height:135px;border-radius:55px 3px 3px 3px}.gs-hero .gs-coin{display:none}.gs-toolbar{gap:10px;align-items:stretch}.gs-toolbar label:first-child,.gs-toolbar label:nth-child(2){min-width:0;flex:1 1 40%}.gs-toolbar .gs-action{flex-basis:100%}.gs-grid,.gs-offers-grid{grid-template-columns:1fr}#main .gs .gs-card{grid-template-columns:minmax(0,36fr) minmax(0,64fr)}.gs-line{flex-wrap:wrap}.gs-feat{grid-template-columns:1fr}.gs-offer dl{grid-template-columns:auto minmax(0,1fr)}}
+  @media(max-width:850px){.gs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gs-hero figure{height:225px}.gs-layout{grid-template-columns:minmax(0,1fr) minmax(235px,.8fr)}}
+  @media(max-width:650px){.gs-hero,.gs-layout{grid-template-columns:minmax(0,1fr)}.gs-hero{gap:15px}.gs-hero figure{height:135px;border-radius:55px 3px 3px 3px}.gs-hero .gs-coin{display:none}.gs-toolbar{gap:10px;align-items:stretch}.gs-toolbar label:first-child,.gs-toolbar label:nth-child(2){min-width:0;flex:1 1 40%}.gs-toolbar .gs-action{flex-basis:100%}.gs-grid,.gs-offers-grid{grid-template-columns:1fr}.gs-card-copy{padding:18px}.gs-line{flex-wrap:wrap}.gs-feat{grid-template-columns:1fr}.gs-offer dl{grid-template-columns:auto minmax(0,1fr)}}
   @media(max-width:360px){.gs-toolbar label:first-child,.gs-toolbar label:nth-child(2){flex-basis:100%}.gs-card .gs-row>*{width:100%}}
   </style>`;
   const photo = item => '<img src="'+safeUrl(item.photo,true)+'" alt="'+e(item.alt)+'" loading="lazy">';
@@ -138,7 +138,7 @@
   const hero = (kicker,title,lead,art,alt,coin=false) => '<header class="gs-hero"><div><span class="gs-upper">'+kicker+'</span><h1>'+title+'</h1><p class="gs-lead">'+lead+'</p>'+demoNotice()+'</div><figure class="'+(coin?'gs-coin':'')+'"><img src="'+safeUrl(art,true)+'" alt="'+e(alt)+'"></figure></header>';
   function menuCard(item){
     const canAdd = available(item);
-    return '<article class="gs-card">'+photo(item)+'<div><h3>'+e(item.name)+'</h3><p>'+e(item.description)+'</p><p class="gs-meta">'+e(item.dietary)+'<br>'+e(item.outlets.map(place).join(' · '))+'</p><div class="gs-row"><strong class="gs-price">'+rs(item.price)+'</strong><button data-gs-add="'+e(item.id)+'" '+(canAdd?'class="primary"':'disabled')+' aria-label="'+e(canAdd?'Add '+item.name+' to cart':item.name+' unavailable')+'">'+(canAdd?'Add to cart':'Unavailable')+'</button></div></div></article>';
+    return '<article class="gs-card">'+photo(item)+'<div class="gs-card-copy"><h3>'+e(item.name)+'</h3><p>'+e(item.description)+'</p><p class="gs-meta">'+e(item.dietary)+'<br>'+e(item.outlets.map(place).join(' · '))+'</p><div class="gs-row"><strong class="gs-price">'+rs(item.price)+'</strong><button data-gs-add="'+e(item.id)+'" '+(canAdd?'class="primary"':'disabled')+' aria-label="'+e(canAdd?'Add '+item.name+' to cart':item.name+' unavailable')+'">'+(canAdd?'Add to cart':'Unavailable')+'</button></div></div></article>';
   }
   const menuGrid = () => {
     const rows=G.menu.filter(i=>(controls.category==='All'||i.category===controls.category) && (i.name+' '+i.description+' '+i.dietary).toLowerCase().includes(controls.query.trim().toLowerCase()));
@@ -148,7 +148,7 @@
   function menuPage(){
     if (!G.categories.includes(controls.category)) controls.category='All';
     const cover=G.menu.find(i=>i.id==='flat-white') || G.menu[0];
-    const top=hero('Coffee &amp; kitchen','The Olympian menu','Choose your café and browse the sample dishes. All prices, ingredients and availability are illustrative.',cover?.photo || siteHref('/images/coffee.jpg'),cover?.alt || 'Sample coffee photography');
+    const top=hero('Coffee &amp; kitchen','The Olympian menu','Choose your café and browse the sample dishes. Dish photos are concepts for this preview. Prices, ingredients and availability await Greko’s approval.',cover?.photo || siteHref('/images/coffee.jpg'),cover?.alt || 'Sample coffee photography');
     return top+'<div class="gs-toolbar">'+choose()+'<label>Search the menu<input type="search" data-gs-search placeholder="Coffee, focaccia, citrus…" value="'+e(controls.query)+'"></label><a href="'+href('/order/')+'" class="gs-action primary" id="gs-cart-count">View cart ('+count()+')</a></div><div class="gs-filters" role="group" aria-label="Menu categories">'+['All',...G.categories].map(c=>'<button aria-pressed="'+(controls.category===c)+'" class="'+(controls.category===c?'selected':'')+'" data-gs-category="'+e(c)+'">'+e(c)+'</button>').join('')+'</div><div id="gs-results">'+menuGrid()+'</div>';
   }
   const offerCard = o => '<article class="gs-offer"><span class="gs-upper">Sample offer</span><h3>'+e(o.name)+'</h3><p>'+e(o.benefit)+'</p><details><summary>Dates, eligibility and terms</summary><dl><dt>Valid dates</dt><dd>'+e(o.start)+' to '+e(o.end)+'</dd><dt>Outlets</dt><dd>'+e(o.outlets.map(place).join(', '))+'</dd><dt>Eligible items</dt><dd>'+e(o.items.map(id=>G.menu.find(i=>i.id===id)?.name || id).join(', '))+'</dd><dt>Minimum</dt><dd>'+rs(o.minimum)+'</dd><dt>Terms</dt><dd>'+e(o.terms)+'</dd></dl></details><div class="gs-row"><code>'+e(o.code)+'</code><button data-gs-copy="'+e(o.code)+'" aria-label="Copy code '+e(o.code)+'">Copy</button><a class="gs-action" href="'+href('/order/')+'" data-gs-try="'+e(o.code)+'">Try in cart</a></div></article>';

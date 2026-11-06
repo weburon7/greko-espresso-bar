@@ -24,3 +24,19 @@ The Apollo cover is a built-in ImageGen concept. Art direction: a weathered marb
 Additional illustrative menu photography: [milk being poured into coffee](https://images.unsplash.com/photo-1541167760496-1628856ab772), [croissant](https://images.unsplash.com/photo-1555507036-ab1f4038808a), and [citrus drink](https://www.pexels.com/photo/96974/).
 
 The homepage uses the wider ImageGen variation in images/apollo-still-life.webp. The edit prompt requested the full Apollo bust and pedestal, generous headroom, and the entire cup and saucer, keeping the original lighting and 3:2 composition.
+
+## Coordinated menu photography
+
+The eight images named images/menu-*.webp were generated using the built-in ImageGen tool for this client prototype. They are concept photographs rather than photos of Greko's actual dishes.
+
+Shared prompt direction: landscape 3:2 editorial food photography, warm pale travertine tabletop, cream plaster background, soft afternoon light from upper left, cobalt blue ceramics, centered product with generous margins, full vessel or plate in frame, camera around 25 degrees above the tabletop, realistic textures and no text, logos or people.
+
+Individual subjects:
+- menu-flat-white.webp — flat white with heart latte art in a small blue cup and saucer.
+- menu-espresso.webp — double espresso with golden crema in a blue demitasse.
+- menu-iced-latte.webp — espresso and milk swirling around ice in a clear glass.
+- menu-cocoa.webp — dark chocolate iced cocoa in a clear glass.
+- menu-focaccia.webp — rosemary focaccia with roasted vegetables and basil on a blue plate.
+- menu-tiramisu.webp — square of layered mascarpone and coffee sponge with cocoa dust.
+- menu-croissant.webp — golden flaky butter croissant on a blue plate.
+- menu-cooler.webp — clear sparkling citrus with lemon, mint and ice.
